@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>893732401756-0ei7k8q7koj52su75cfl2cnidi30o7l9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.893732401756-0ei7k8q7koj52su75cfl2cnidi30o7l9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDrWP_nlrRQPhy4DALjrWddBips6GVSSzA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>893732401756</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>hatem.Tawasol</string>
+	<key>PROJECT_ID</key>
+	<string>tawasol-88203</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tawasol-88203.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:893732401756:ios:23b0e9d29ef85c6a50ac99</string>
+</dict>
+</plist>

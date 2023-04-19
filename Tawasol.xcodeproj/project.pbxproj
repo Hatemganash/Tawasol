@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89923B1F29EF99D200C6F4E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */; };
+		89BB53D329EF6D0900719FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D229EF6D0900719FA3 /* AppDelegate.swift */; };
+		89BB53D529EF6D0900719FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */; };
+		89BB53D729EF6D0900719FA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D629EF6D0900719FA3 /* LoginViewController.swift */; };
+		89BB53DA29EF6D0900719FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BB53D829EF6D0900719FA3 /* Main.storyboard */; };
+		89BB53DD29EF6D0900719FA3 /* Tawasol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53DB29EF6D0900719FA3 /* Tawasol.xcdatamodeld */; };
+		89BB53DF29EF6D0A00719FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BB53DE29EF6D0A00719FA3 /* Assets.xcassets */; };
+		89BB53E229EF6D0A00719FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BB53E029EF6D0A00719FA3 /* LaunchScreen.storyboard */; };
+		ED374773014E9FF73FF947B1 /* Pods_Tawasol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C8131F6E77C698D08F0BBF /* Pods_Tawasol.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11547B53164EE12D7ADBC4B8 /* Pods-Tawasol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.release.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.release.xcconfig"; sourceTree = "<group>"; };
+		89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89BB53CF29EF6D0900719FA3 /* Tawasol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tawasol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89BB53D229EF6D0900719FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		89BB53D629EF6D0900719FA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		89BB53D929EF6D0900719FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89BB53DC29EF6D0900719FA3 /* Tawasol.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tawasol.xcdatamodel; sourceTree = "<group>"; };
+		89BB53DE29EF6D0A00719FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89BB53E129EF6D0A00719FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89BB53E329EF6D0A00719FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90C8131F6E77C698D08F0BBF /* Pods_Tawasol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tawasol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F38D342CEB637547C38912EF /* Pods-Tawasol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.debug.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89BB53CC29EF6D0900719FA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED374773014E9FF73FF947B1 /* Pods_Tawasol.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89BB53C629EF6D0900719FA3 = {
+			isa = PBXGroup;
+			children = (
+				89BB53D129EF6D0900719FA3 /* Tawasol */,
+				89BB53D029EF6D0900719FA3 /* Products */,
+				AEF0EA547BCAE88E98424C38 /* Pods */,
+				992355464C37DBC83AC5A325 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		89BB53D029EF6D0900719FA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89BB53CF29EF6D0900719FA3 /* Tawasol.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89BB53D129EF6D0900719FA3 /* Tawasol */ = {
+			isa = PBXGroup;
+			children = (
+				89BB53D229EF6D0900719FA3 /* AppDelegate.swift */,
+				89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */,
+				89BB53D629EF6D0900719FA3 /* LoginViewController.swift */,
+				89BB53D829EF6D0900719FA3 /* Main.storyboard */,
+				89BB53DE29EF6D0A00719FA3 /* Assets.xcassets */,
+				89BB53E029EF6D0A00719FA3 /* LaunchScreen.storyboard */,
+				89BB53E329EF6D0A00719FA3 /* Info.plist */,
+				89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */,
+				89BB53DB29EF6D0900719FA3 /* Tawasol.xcdatamodeld */,
+			);
+			path = Tawasol;
+			sourceTree = "<group>";
+		};
+		992355464C37DBC83AC5A325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90C8131F6E77C698D08F0BBF /* Pods_Tawasol.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEF0EA547BCAE88E98424C38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F38D342CEB637547C38912EF /* Pods-Tawasol.debug.xcconfig */,
+				11547B53164EE12D7ADBC4B8 /* Pods-Tawasol.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89BB53CE29EF6D0900719FA3 /* Tawasol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89BB53E629EF6D0A00719FA3 /* Build configuration list for PBXNativeTarget "Tawasol" */;
+			buildPhases = (
+				C8A82B6695F5FF3006AE85BA /* [CP] Check Pods Manifest.lock */,
+				89BB53CB29EF6D0900719FA3 /* Sources */,
+				89BB53CC29EF6D0900719FA3 /* Frameworks */,
+				89BB53CD29EF6D0900719FA3 /* Resources */,
+				3FB9D4137C08D37C7D77205B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tawasol;
+			productName = Tawasol;
+			productReference = 89BB53CF29EF6D0900719FA3 /* Tawasol.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89BB53C729EF6D0900719FA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					89BB53CE29EF6D0900719FA3 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 89BB53CA29EF6D0900719FA3 /* Build configuration list for PBXProject "Tawasol" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89BB53C629EF6D0900719FA3;
+			productRefGroup = 89BB53D029EF6D0900719FA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89BB53CE29EF6D0900719FA3 /* Tawasol */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89BB53CD29EF6D0900719FA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89BB53E229EF6D0A00719FA3 /* LaunchScreen.storyboard in Resources */,
+				89923B1F29EF99D200C6F4E8 /* GoogleService-Info.plist in Resources */,
+				89BB53DF29EF6D0A00719FA3 /* Assets.xcassets in Resources */,
+				89BB53DA29EF6D0900719FA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FB9D4137C08D37C7D77205B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tawasol/Pods-Tawasol-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tawasol/Pods-Tawasol-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tawasol/Pods-Tawasol-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8A82B6695F5FF3006AE85BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tawasol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89BB53CB29EF6D0900719FA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89BB53D729EF6D0900719FA3 /* LoginViewController.swift in Sources */,
+				89BB53D329EF6D0900719FA3 /* AppDelegate.swift in Sources */,
+				89BB53D529EF6D0900719FA3 /* SceneDelegate.swift in Sources */,
+				89BB53DD29EF6D0900719FA3 /* Tawasol.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		89BB53D829EF6D0900719FA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89BB53D929EF6D0900719FA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89BB53E029EF6D0A00719FA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89BB53E129EF6D0A00719FA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89BB53E429EF6D0A00719FA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89BB53E529EF6D0A00719FA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89BB53E729EF6D0A00719FA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F38D342CEB637547C38912EF /* Pods-Tawasol.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tawasol/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hatem.Tawasol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89BB53E829EF6D0A00719FA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11547B53164EE12D7ADBC4B8 /* Pods-Tawasol.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tawasol/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hatem.Tawasol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89BB53CA29EF6D0900719FA3 /* Build configuration list for PBXProject "Tawasol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89BB53E429EF6D0A00719FA3 /* Debug */,
+				89BB53E529EF6D0A00719FA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89BB53E629EF6D0A00719FA3 /* Build configuration list for PBXNativeTarget "Tawasol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89BB53E729EF6D0A00719FA3 /* Debug */,
+				89BB53E829EF6D0A00719FA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		89BB53DB29EF6D0900719FA3 /* Tawasol.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				89BB53DC29EF6D0900719FA3 /* Tawasol.xcdatamodel */,
+			);
+			currentVersion = 89BB53DC29EF6D0900719FA3 /* Tawasol.xcdatamodel */;
+			path = Tawasol.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 89BB53C729EF6D0900719FA3 /* Project object */;
+}
