@@ -3,10 +3,10 @@ import UIKit
 import ProgressHUD
 
 class LoginViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         emailLblOutlet.text = ""
         passwordLblOutlet.text = ""
         confirmPassLblOutlet.text = ""
@@ -40,23 +40,28 @@ class LoginViewController: UIViewController {
     @IBAction func forgetPasswordbtn(_ sender: Any) {
         if isDataInputedFor(mode: "forgetPassword") {
             print("All Data Inputed")
+            
+            forgetPassword()
+            
         } else {
             ProgressHUD.showError("Email Fields Are required")
         }
-    
+        
     }
     @IBAction func resendEmailBtn(_ sender: Any) {
-        print("Resend email")
+        resendVerficationEmail()
     }
     @IBAction func registerBtn(_ sender: Any) {
         if isDataInputedFor(mode: isLogin ? "Login" : "Register"){
-            print("Data is inputed correctly")
+            
+            isLogin ? loginUser() :  registerUser()
+            
         } else {
-           
+            
             ProgressHUD.showError("Error - All Fields Must have Data")
         }
         
-    
+        
     }
     @IBAction func loginBtn(_ sender: Any) {
         updateUIMode(mode: isLogin)
@@ -73,9 +78,9 @@ class LoginViewController: UIViewController {
             registerBtnOutlet.setTitle("Login", for: .normal)
             loginBtnOutlet.setTitle("Register", for: .normal)
             forgetPasswordOutlet.isHidden = false
-
             
-
+            
+            
         } else {
             titleOutlet.text = "Register"
             confirmPassLblOutlet.isHidden = false
@@ -101,7 +106,7 @@ class LoginViewController: UIViewController {
             return emailTxtFieldOutlet.text != ""
         default:
             return false
-
+            
         }
     }
     //MARK:- Tap gesture
@@ -113,8 +118,66 @@ class LoginViewController: UIViewController {
     @objc func hideKeyboard (){
         view.endEditing(true)
     }
-
-
+    
+    //Register User
+    
+    private func registerUser() {
+        
+        if passwordTxtFieldOutlet.text! == confirmPasswordTxtFieldOutlet.text! {
+            
+            FUserListner.shared.registerUserWith(email: emailTxtFieldOutlet.text!, password: passwordTxtFieldOutlet.text!) { error in
+                if error == nil {
+                    ProgressHUD.showSuccess("Verification Email Sent Successfully , verify your email and confirm the registeration")
+                }
+                else {
+                    ProgressHUD.showError(error?.localizedDescription)
+                }
+            }
+            
+        } else {
+            ProgressHUD.showError("password didn't match")
+        }
+        
+    }
+    
+    private func resendVerficationEmail() {
+        FUserListner.shared.resendVerficationEmailWith(email: emailTxtFieldOutlet.text!) { error in
+            if error == nil {
+                ProgressHUD.showSuccess("verfication email sent successfully")
+            } else {
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
+    
+    
+    private func loginUser(){
+        FUserListner.shared.loginUserWith(email: emailTxtFieldOutlet.text!, password: passwordTxtFieldOutlet.text!) { error, isEmailVerified in
+            
+            if error == nil {
+                if isEmailVerified {
+                    ProgressHUD.showSuccess("Welcome Bro")
+                    // To chat app
+                }else {
+                    ProgressHUD.showFailed("Please check your Email and verify your registeration")
+                }
+            }else {
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
+    
+    
+    private func forgetPassword(){
+        FUserListner.shared.resetPasswordFor(email: emailTxtFieldOutlet.text!) { error in
+            if error == nil {
+                ProgressHUD.showSuccess("Reset Password Email Sent Successfully")
+            } else {
+                ProgressHUD.showFailed(error?.localizedDescription)
+            }
+        }
+    }
+    
 }
 
 extension LoginViewController : UITextFieldDelegate {
@@ -122,7 +185,7 @@ extension LoginViewController : UITextFieldDelegate {
         emailLblOutlet.text = emailTxtFieldOutlet.hasText ? "Email" : ""
         passwordLblOutlet.text = passwordTxtFieldOutlet.hasText ? "Password" : ""
         confirmPassLblOutlet.text = confirmPasswordTxtFieldOutlet.hasText ? "Confirm Password" : ""
-
+        
     }
 }
 

@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		897ED28829F8A50700B14B6B /* Constance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897ED28729F8A50700B14B6B /* Constance.swift */; };
 		89923B1F29EF99D200C6F4E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */; };
+		89923B2129EFEF2900C6F4E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89923B2029EFEF2900C6F4E8 /* User.swift */; };
+		89923B2429EFF20E00C6F4E8 /* FCollectionReferance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */; };
+		89923B2729EFF52800C6F4E8 /* FUserListner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89923B2629EFF52800C6F4E8 /* FUserListner.swift */; };
 		89BB53D329EF6D0900719FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D229EF6D0900719FA3 /* AppDelegate.swift */; };
 		89BB53D529EF6D0900719FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */; };
 		89BB53D729EF6D0900719FA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D629EF6D0900719FA3 /* LoginViewController.swift */; };
@@ -20,7 +24,11 @@
 
 /* Begin PBXFileReference section */
 		11547B53164EE12D7ADBC4B8 /* Pods-Tawasol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.release.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.release.xcconfig"; sourceTree = "<group>"; };
+		897ED28729F8A50700B14B6B /* Constance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constance.swift; sourceTree = "<group>"; };
 		89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89923B2029EFEF2900C6F4E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReferance.swift; sourceTree = "<group>"; };
+		89923B2629EFF52800C6F4E8 /* FUserListner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserListner.swift; sourceTree = "<group>"; };
 		89BB53CF29EF6D0900719FA3 /* Tawasol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tawasol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BB53D229EF6D0900719FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89923B2229EFF10100C6F4E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89923B2029EFEF2900C6F4E8 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		89BB53C629EF6D0900719FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +92,10 @@
 				89BB53E329EF6D0A00719FA3 /* Info.plist */,
 				89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */,
 				89BB53DB29EF6D0900719FA3 /* Tawasol.xcdatamodeld */,
+				89923B2229EFF10100C6F4E8 /* Model */,
+				89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */,
+				89923B2629EFF52800C6F4E8 /* FUserListner.swift */,
+				897ED28729F8A50700B14B6B /* Constance.swift */,
 			);
 			path = Tawasol;
 			sourceTree = "<group>";
@@ -213,9 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897ED28829F8A50700B14B6B /* Constance.swift in Sources */,
+				89923B2429EFF20E00C6F4E8 /* FCollectionReferance.swift in Sources */,
 				89BB53D729EF6D0900719FA3 /* LoginViewController.swift in Sources */,
+				89923B2729EFF52800C6F4E8 /* FUserListner.swift in Sources */,
 				89BB53D329EF6D0900719FA3 /* AppDelegate.swift in Sources */,
 				89BB53D529EF6D0900719FA3 /* SceneDelegate.swift in Sources */,
+				89923B2129EFEF2900C6F4E8 /* User.swift in Sources */,
 				89BB53DD29EF6D0900719FA3 /* Tawasol.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

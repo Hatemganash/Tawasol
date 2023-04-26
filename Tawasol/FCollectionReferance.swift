@@ -1,8 +1,15 @@
-//
-//  FCollectionReferance.swift
-//  Tawasol
-//
-//  Created by Hatem on 19/04/2023.
-//
 
 import Foundation
+import Firebase
+
+
+enum FCollectionReferance : String {
+    case User
+}
+
+func FirestoreReferance ( _ collectionRef : FCollectionReferance) -> CollectionReference {
+    
+    return Firestore.firestore().collection(collectionRef.rawValue)
+}
+
+
