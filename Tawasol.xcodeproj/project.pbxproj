@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		895244AB29FB125200B5D91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895244A729FB125200B5D91E /* LaunchScreen.storyboard */; };
+		895244AC29FB125200B5D91E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895244A929FB125200B5D91E /* Main.storyboard */; };
 		897ED28829F8A50700B14B6B /* Constance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897ED28729F8A50700B14B6B /* Constance.swift */; };
+		898A9B3C29FA31D000282EBD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A9B3B29FA31D000282EBD /* SettingsTableViewController.swift */; };
 		89923B1F29EF99D200C6F4E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */; };
 		89923B2129EFEF2900C6F4E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89923B2029EFEF2900C6F4E8 /* User.swift */; };
 		89923B2429EFF20E00C6F4E8 /* FCollectionReferance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */; };
@@ -15,16 +18,17 @@
 		89BB53D329EF6D0900719FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D229EF6D0900719FA3 /* AppDelegate.swift */; };
 		89BB53D529EF6D0900719FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */; };
 		89BB53D729EF6D0900719FA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53D629EF6D0900719FA3 /* LoginViewController.swift */; };
-		89BB53DA29EF6D0900719FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BB53D829EF6D0900719FA3 /* Main.storyboard */; };
 		89BB53DD29EF6D0900719FA3 /* Tawasol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89BB53DB29EF6D0900719FA3 /* Tawasol.xcdatamodeld */; };
 		89BB53DF29EF6D0A00719FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BB53DE29EF6D0A00719FA3 /* Assets.xcassets */; };
-		89BB53E229EF6D0A00719FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BB53E029EF6D0A00719FA3 /* LaunchScreen.storyboard */; };
 		ED374773014E9FF73FF947B1 /* Pods_Tawasol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C8131F6E77C698D08F0BBF /* Pods_Tawasol.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11547B53164EE12D7ADBC4B8 /* Pods-Tawasol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.release.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.release.xcconfig"; sourceTree = "<group>"; };
+		895244A829FB125200B5D91E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		895244AA29FB125200B5D91E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		897ED28729F8A50700B14B6B /* Constance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constance.swift; sourceTree = "<group>"; };
+		898A9B3B29FA31D000282EBD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89923B2029EFEF2900C6F4E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReferance.swift; sourceTree = "<group>"; };
@@ -33,10 +37,8 @@
 		89BB53D229EF6D0900719FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89BB53D629EF6D0900719FA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		89BB53D929EF6D0900719FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89BB53DC29EF6D0900719FA3 /* Tawasol.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tawasol.xcdatamodel; sourceTree = "<group>"; };
 		89BB53DE29EF6D0A00719FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		89BB53E129EF6D0A00719FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89BB53E329EF6D0A00719FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C8131F6E77C698D08F0BBF /* Pods_Tawasol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tawasol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38D342CEB637547C38912EF /* Pods-Tawasol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.debug.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		898A9B3D29FA3EE900282EBD /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+				89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */,
+				89923B2629EFF52800C6F4E8 /* FUserListner.swift */,
+				89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */,
+			);
+			path = firebase;
+			sourceTree = "<group>";
+		};
 		89923B2229EFF10100C6F4E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,19 +95,18 @@
 		89BB53D129EF6D0900719FA3 /* Tawasol */ = {
 			isa = PBXGroup;
 			children = (
+				898A9B3D29FA3EE900282EBD /* firebase */,
 				89BB53D229EF6D0900719FA3 /* AppDelegate.swift */,
 				89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */,
 				89BB53D629EF6D0900719FA3 /* LoginViewController.swift */,
-				89BB53D829EF6D0900719FA3 /* Main.storyboard */,
+				895244A729FB125200B5D91E /* LaunchScreen.storyboard */,
+				895244A929FB125200B5D91E /* Main.storyboard */,
 				89BB53DE29EF6D0A00719FA3 /* Assets.xcassets */,
-				89BB53E029EF6D0A00719FA3 /* LaunchScreen.storyboard */,
 				89BB53E329EF6D0A00719FA3 /* Info.plist */,
-				89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */,
 				89BB53DB29EF6D0900719FA3 /* Tawasol.xcdatamodeld */,
 				89923B2229EFF10100C6F4E8 /* Model */,
-				89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */,
-				89923B2629EFF52800C6F4E8 /* FUserListner.swift */,
 				897ED28729F8A50700B14B6B /* Constance.swift */,
+				898A9B3B29FA31D000282EBD /* SettingsTableViewController.swift */,
 			);
 			path = Tawasol;
 			sourceTree = "<group>";
@@ -177,10 +188,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89BB53E229EF6D0A00719FA3 /* LaunchScreen.storyboard in Resources */,
+				895244AB29FB125200B5D91E /* LaunchScreen.storyboard in Resources */,
 				89923B1F29EF99D200C6F4E8 /* GoogleService-Info.plist in Resources */,
 				89BB53DF29EF6D0A00719FA3 /* Assets.xcassets in Resources */,
-				89BB53DA29EF6D0900719FA3 /* Main.storyboard in Resources */,
+				895244AC29FB125200B5D91E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,26 +252,27 @@
 				89BB53D529EF6D0900719FA3 /* SceneDelegate.swift in Sources */,
 				89923B2129EFEF2900C6F4E8 /* User.swift in Sources */,
 				89BB53DD29EF6D0900719FA3 /* Tawasol.xcdatamodeld in Sources */,
+				898A9B3C29FA31D000282EBD /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		89BB53D829EF6D0900719FA3 /* Main.storyboard */ = {
+		895244A729FB125200B5D91E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				89BB53D929EF6D0900719FA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		89BB53E029EF6D0A00719FA3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				89BB53E129EF6D0A00719FA3 /* Base */,
+				895244A829FB125200B5D91E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		895244A929FB125200B5D91E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				895244AA29FB125200B5D91E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

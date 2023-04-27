@@ -139,7 +139,7 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
+    // Resend Verfication
     private func resendVerficationEmail() {
         FUserListner.shared.resendVerficationEmailWith(email: emailTxtFieldOutlet.text!) { error in
             if error == nil {
@@ -150,14 +150,14 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    // Login User
     private func loginUser(){
         FUserListner.shared.loginUserWith(email: emailTxtFieldOutlet.text!, password: passwordTxtFieldOutlet.text!) { error, isEmailVerified in
             
             if error == nil {
                 if isEmailVerified {
-                    ProgressHUD.showSuccess("Welcome Bro")
-                    // To chat app
+                    
+                    self.goToApp()
                 }else {
                     ProgressHUD.showFailed("Please check your Email and verify your registeration")
                 }
@@ -167,7 +167,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    //Forget Password
     private func forgetPassword(){
         FUserListner.shared.resetPasswordFor(email: emailTxtFieldOutlet.text!) { error in
             if error == nil {
@@ -177,6 +177,14 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    //Navigation
+    
+    private func goToApp(){
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as! UITabBarController
+
+        mainView.modalPresentationStyle = .fullScreen
+        self.present(mainView, animated: true)
+   }
     
 }
 

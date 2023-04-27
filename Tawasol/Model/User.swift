@@ -1,6 +1,7 @@
 
 
 import Foundation
+import Firebase
 import FirebaseFirestoreSwift
 
 struct User:Codable {
@@ -12,7 +13,21 @@ struct User:Codable {
     var avatarLink : String
     var status : String
     
-    
+    static var currentUser : User? {
+        if Auth.auth().currentUser != nil {
+            
+            if let data = userDefaults.data(forKey: kCurrentUser){
+                let decoder = JSONDecoder()
+                do {
+                    let userObject = try decoder.decode(User.self, from: data)
+                    return userObject
+                } catch {
+                    print (error.localizedDescription)
+                }
+            }
+        }
+        return nil
+    }
 }
 
 func saveUserLocally(_ user : User){
