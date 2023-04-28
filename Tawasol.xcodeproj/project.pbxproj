@@ -20,6 +20,7 @@
 		89BB53DF29EF6D0A00719FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BB53DE29EF6D0A00719FA3 /* Assets.xcassets */; };
 		89BE88DF29FB7348009DAEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BE88DD29FB7347009DAEFB /* Main.storyboard */; };
 		89BE88E029FB7348009DAEFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BE88DE29FB7347009DAEFB /* LaunchScreen.storyboard */; };
+		89BE88E529FB8C8A009DAEFB /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BE88E429FB8C8A009DAEFB /* EditProfileTableViewController.swift */; };
 		ED374773014E9FF73FF947B1 /* Pods_Tawasol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C8131F6E77C698D08F0BBF /* Pods_Tawasol.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		89BB53E329EF6D0A00719FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BE88DD29FB7347009DAEFB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Tawasol/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		89BE88DE29FB7347009DAEFB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Tawasol/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		89BE88E429FB8C8A009DAEFB /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		90C8131F6E77C698D08F0BBF /* Pods_Tawasol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tawasol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38D342CEB637547C38912EF /* Pods-Tawasol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.debug.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				89BB53D429EF6D0900719FA3 /* SceneDelegate.swift */,
 				89BB53D629EF6D0900719FA3 /* LoginViewController.swift */,
 				898A9B3B29FA31D000282EBD /* SettingsTableViewController.swift */,
+				89BE88E429FB8C8A009DAEFB /* EditProfileTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				897ED28829F8A50700B14B6B /* Constance.swift in Sources */,
 				89923B2429EFF20E00C6F4E8 /* FCollectionReferance.swift in Sources */,
 				89BB53D729EF6D0900719FA3 /* LoginViewController.swift in Sources */,
+				89BE88E529FB8C8A009DAEFB /* EditProfileTableViewController.swift in Sources */,
 				89923B2729EFF52800C6F4E8 /* FUserListner.swift in Sources */,
 				89BB53D329EF6D0900719FA3 /* AppDelegate.swift in Sources */,
 				89BB53D529EF6D0900719FA3 /* SceneDelegate.swift in Sources */,

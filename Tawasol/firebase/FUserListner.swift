@@ -86,7 +86,7 @@ class FUserListner {
         
     }
     
-    private func saveUserToFirestore (_ user : User){
+    func saveUserToFirestore (_ user : User){
         
         do{
             try FirestoreReferance(.User).document(user.id).setData(from : user)

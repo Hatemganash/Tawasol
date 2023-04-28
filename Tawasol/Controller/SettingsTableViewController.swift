@@ -66,6 +66,12 @@ class SettingsTableViewController: UITableViewController {
         return section == 0 ? 0.0 : 0.5
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 && indexPath.section == 0 {
+            performSegue(withIdentifier: "SettingsToEditProfileSegue", sender: self)
+        }
+    }
+    
     // MARK: - Update UI
     
     private func showUserInfo(){
