@@ -11,9 +11,9 @@ class FUserListner {
         
     }
     
-    //MARK:- Register & Login
+    //MARK: - Register & Login
     
-    //Login
+    // MARK: -  Login
     
     func loginUserWith (email : String , password : String , completion : @escaping (_ error : Error? , _ isEmailVerified : Bool)-> Void){
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -27,7 +27,7 @@ class FUserListner {
         
     }
     
-    //Forget Password
+    // MARK: -  Forget Password
     
     func resetPasswordFor (email : String , completion : @escaping (_ error : Error?)->Void) {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
@@ -37,9 +37,24 @@ class FUserListner {
     }
     
     
+    // MARK: - LogOut
+    
+    func logoutCurrentUser(completion : @escaping (_ error : Error?)-> Void){
+        
+        do {
+            try Auth.auth().signOut()
+            userDefaults.removeObject(forKey: kCurrentUser)
+            userDefaults.synchronize()
+            completion(nil)
+        } catch let error as NSError {
+            completion(error)
+        }
+        
+    }
     
     
-    //Register
+    
+    // MARK: - Register
     
     func registerUserWith (email :String , password : String , completion : @escaping ( _ error : Error?) -> Void ) {
         Auth.auth().createUser(withEmail: email, password: password) {[self] authResults, error in
@@ -59,7 +74,7 @@ class FUserListner {
         
     }
     
-    // Resend Email
+    // MARK: - Resend Email
     
     func resendVerficationEmailWith (email : String , completion : @escaping (_ error :Error?)->Void){
         
@@ -80,7 +95,7 @@ class FUserListner {
         }
     }
     
-    //Dowenload user from firestore
+    // MARK: - Dowenload user from firestore
     
     private func downloadUserFromFirestore (userId : String){
         FirestoreReferance(.User).document(userId).getDocument { document, error in
