@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		897ED28829F8A50700B14B6B /* Constance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897ED28729F8A50700B14B6B /* Constance.swift */; };
+		8983C40829FCDA430069B0C1 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8983C40729FCDA430069B0C1 /* FileStorage.swift */; };
 		898A9B3C29FA31D000282EBD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A9B3B29FA31D000282EBD /* SettingsTableViewController.swift */; };
 		89923B1F29EF99D200C6F4E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */; };
 		89923B2129EFEF2900C6F4E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89923B2029EFEF2900C6F4E8 /* User.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		11547B53164EE12D7ADBC4B8 /* Pods-Tawasol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.release.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.release.xcconfig"; sourceTree = "<group>"; };
 		897ED28729F8A50700B14B6B /* Constance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constance.swift; sourceTree = "<group>"; };
+		8983C40729FCDA430069B0C1 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		898A9B3B29FA31D000282EBD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89923B2029EFEF2900C6F4E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				89923B2329EFF20E00C6F4E8 /* FCollectionReferance.swift */,
 				89923B2629EFF52800C6F4E8 /* FUserListner.swift */,
+				8983C40729FCDA430069B0C1 /* FileStorage.swift */,
 				89923B1E29EF99D100C6F4E8 /* GoogleService-Info.plist */,
 			);
 			path = firebase;
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				897ED28829F8A50700B14B6B /* Constance.swift in Sources */,
+				8983C40829FCDA430069B0C1 /* FileStorage.swift in Sources */,
 				89923B2429EFF20E00C6F4E8 /* FCollectionReferance.swift in Sources */,
 				89BB53D729EF6D0900719FA3 /* LoginViewController.swift in Sources */,
 				89BE88E529FB8C8A009DAEFB /* EditProfileTableViewController.swift in Sources */,

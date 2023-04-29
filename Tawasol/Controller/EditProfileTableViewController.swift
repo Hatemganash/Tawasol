@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Gallery
+import ProgressHUD
 
 class EditProfileTableViewController: UITableViewController, UITextFieldDelegate {
     
@@ -16,6 +18,8 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         configureTextField()
         
     }
+    var gallery : GalleryController!
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.0
     }
@@ -41,6 +45,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
     
     
     @IBAction func editBtnAction(_ sender: Any) {
+        showImageGallery()
     }
     
     private func showUserInfo(){
@@ -54,6 +59,31 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         }
         
         
+    }
+    // MARK: - Gallery
+    
+    private func showImageGallery() {
+        
+        self.gallery = GalleryController()
+        self.gallery.delegate = self
+        
+        Config.tabsToShow = [.imageTab , .cameraTab ]
+        Config.Camera.imageLimit = 1
+        Config.initialTab = .imageTab
+        
+        self.present(gallery, animated: true)
+    }
+    private func uploadAvatarImage(_ image : UIImage) {
+        let fileDirectory = "Avatars/" + "\(User.currentId)" + ".jpg"
+        FileStorage.uploadImage(image, directory: fileDirectory) { avatarLink in
+            if var user = User.currentUser {
+                user.avatarLink = avatarLink ?? ""
+                saveUserLocally(user)
+                FUserListner.shared.saveUserToFirestore(user)
+            }
+            
+            FileStorage.saveFileLocally(fileData: image.jpegData(compressionQuality: 0.5)! as NSData , fileName: User.currentId )
+        }
     }
     
     private func configureTextField(){
@@ -76,6 +106,41 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         }
         return true
         
+    }
+    
+    
+}
+
+extension EditProfileTableViewController : GalleryControllerDelegate {
+    
+    
+    func galleryController(_ controller: Gallery.GalleryController, didSelectImages images: [Gallery.Image]) {
+        if images.count > 0 {
+            images.first!.resolve { avatarImage in
+                if avatarImage != nil {
+                    self.uploadAvatarImage(avatarImage!)
+                    self.avatarImageViewOutlet.image = avatarImage
+                } else {
+                    ProgressHUD.showError("Could not select image")
+                }
+            }
+        }
+        controller.dismiss(animated: true)
+
+    }
+    
+    func galleryController(_ controller: Gallery.GalleryController, didSelectVideo video: Gallery.Video) {
+        controller.dismiss(animated: true)
+
+    }
+    
+    func galleryController(_ controller: Gallery.GalleryController, requestLightbox images: [Gallery.Image]) {
+        controller.dismiss(animated: true)
+
+    }
+    
+    func galleryControllerDidCancel(_ controller: Gallery.GalleryController) {
+        controller.dismiss(animated: true)
     }
     
     
