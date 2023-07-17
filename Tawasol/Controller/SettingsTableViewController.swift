@@ -82,7 +82,12 @@ class SettingsTableViewController: UITableViewController {
             appVersionLBLOutlet.text = "App Version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "" )"
             
             if user.avatarLink != "" {
-                ///// Downillloaaddddd Phhhoooootoooo
+                // TODO: - Dowenload Photo
+                
+                FileStorage.dowenloadImg(imgUrl: user.avatarLink) { avatarImage in
+                    self.avatarImgOutlet.image = avatarImage?.circleMasked
+                }
+
             }
         }
     }

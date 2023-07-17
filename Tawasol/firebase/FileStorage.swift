@@ -44,7 +44,46 @@ class FileStorage {
         }
         
     }
+     
+    class func dowenloadImg(imgUrl : String , completion : @escaping(_ image : UIImage?) -> Void) {
+        let imageFileName = fileNameFrom(fileUrl: imgUrl)
+        if fileExistsAtPsth(path: imageFileName){
+            
+            if let contentsOfFile =  UIImage(contentsOfFile: fileInDocumentDirectory(fileName: imageFileName)) {
+                completion (contentsOfFile)
+                
+            } else {
+                print("Couldnt convert local image ")
+                completion (UIImage(named: "Avatar")!)
+            }
+        } else {
+            
+            if imgUrl != "" {
+                let documentUrl = URL(string: imgUrl)
+                let dowenloadQueue = DispatchQueue (label: "imageDowenloadQueue")
+                
+                dowenloadQueue.async {
+                    let data = NSData(contentsOf: documentUrl!)
+                    if data != nil {
+                        
+                        FileStorage.saveFileLocally(fileData: data!, fileName: imageFileName)
+                        DispatchQueue.main.async {
+                            completion(UIImage(data: data! as Data))
+                        }
+                    }else {
+                        print("no document found in database")
+                        completion(nil)
+                    }
+                }
+            }
+            
+            
+        }
+        
+    }
     
+    
+    // MARK: - Save file Locally
     class func saveFileLocally (fileData : NSData , fileName : String ) {
         let docUrl = getDocumentURL().appendingPathComponent(fileName , isDirectory: false)
         fileData.write(to: docUrl, atomically: true)

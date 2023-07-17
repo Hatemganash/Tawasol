@@ -122,4 +122,28 @@ class FUserListner {
         }
     }
     
+    func dowenloadAllUsersFromFirestore(completion : @escaping (_ allUsers : [User])-> Void ) {
+        
+        var users:[User] = []
+        
+        FirestoreReferance(.User).getDocuments { snapshot, error in
+            guard let documents = snapshot?.documents else {
+                print("No documents Found")
+                return
+            }
+            let allUsers = documents.compactMap { snapshot in
+                return try? snapshot.data(as: User.self)
+            }
+            
+            for user in allUsers{
+                if User.currentId != user.id {
+                    users.append(user)
+                }
+            }
+            completion(users)
+        }
+        
+    }
+    
+    
 }

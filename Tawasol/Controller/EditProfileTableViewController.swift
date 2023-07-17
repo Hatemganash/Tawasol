@@ -31,6 +31,12 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         return headerView
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 && indexPath.row == 0 {
+            performSegue(withIdentifier: "editProfileToStatusSegue", sender: self)
+        }
+    }
+    
     
     // MARK: - Outlets
     
@@ -54,7 +60,11 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
             usernameTextFieldOutlet.text = user.username
             statusLBLOutlet.text = user.status
             if user.avatarLink != "" {
-                // MARK: - Set Avatar Img
+                FileStorage.dowenloadImg(imgUrl: user.avatarLink) { avatarImage in
+                    self.avatarImageViewOutlet.image = avatarImage?.circleMasked
+                    
+                }
+
             }
         }
         
@@ -74,7 +84,7 @@ class EditProfileTableViewController: UITableViewController, UITextFieldDelegate
         self.present(gallery, animated: true)
     }
     private func uploadAvatarImage(_ image : UIImage) {
-        let fileDirectory = "Avatars/" + "\(User.currentId)" + ".jpg"
+        let fileDirectory = "Avatars/" + "_\(User.currentId)" + ".jpg"
         FileStorage.uploadImage(image, directory: fileDirectory) { avatarLink in
             if var user = User.currentUser {
                 user.avatarLink = avatarLink ?? ""
