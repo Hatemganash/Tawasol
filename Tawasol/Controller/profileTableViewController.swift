@@ -50,5 +50,12 @@ class profileTableViewController: UITableViewController {
         return headerView
     }
        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            print("Start Chatting")
+            
+            let chatId = startChat(sender: User.currentUser!, reciever: user!)
+        }
+    }
     
 }

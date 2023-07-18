@@ -141,7 +141,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ipg-8f-tiY">
-                                <rect key="frame" x="127.66666666666667" y="498.99999999999994" width="227.33333333333331" height="34.333333333333314"/>
+                                <rect key="frame" x="127.66666666666669" y="498.99999999999994" width="227.33333333333331" height="34.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-6a-dT8">
                                         <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="34.333333333333336"/>
@@ -534,7 +534,7 @@
         <!--Users-->
         <scene sceneID="3qo-3d-hY3">
             <objects>
-                <tableViewController id="ejr-HO-ABt" customClass="UsersTableViewController" customModule="Tawasol" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="usersView" id="ejr-HO-ABt" customClass="UsersTableViewController" customModule="Tawasol" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="h0Q-ur-SV2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -711,7 +711,7 @@
             </objects>
             <point key="canvasLocation" x="892" y="-27"/>
         </scene>
-        <!--Chat Room Table View Controller-->
+        <!--Chats-->
         <scene sceneID="XkR-HT-Jli">
             <objects>
                 <tableViewController id="Tbh-KL-bZi" customClass="ChatRoomTableViewController" customModule="Tawasol" customModuleProvider="target" sceneMemberID="viewController">
@@ -763,7 +763,7 @@
                                                 <constraint firstAttribute="width" constant="30" id="sVu-Re-MXf"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhc-Jr-7Ch">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhc-Jr-7Ch">
                                             <rect key="frame" x="319" y="11" width="36" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -800,7 +800,13 @@
                             <outlet property="delegate" destination="Tbh-KL-bZi" id="b3o-aJ-wFf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5Zs-QD-4hF"/>
+                    <navigationItem key="navigationItem" title="Chats" id="5Zs-QD-4hF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="jAn-4v-oqZ">
+                            <connections>
+                                <action selector="composebuttonpressed:" destination="Tbh-KL-bZi" id="mpO-fX-wcl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcE-8U-6gC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -850,8 +856,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="43S-aC-vmN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chat" image="message" catalog="system" id="fNi-MX-ZBw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r1L-V9-FpR">
-                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="r1L-V9-FpR">
+                        <rect key="frame" x="0.0" y="47" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -4,7 +4,7 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
-struct User:Codable {
+struct User:Codable , Equatable {
     
     var id : String
     var username : String
@@ -33,6 +33,10 @@ struct User:Codable {
         }
         return nil
     }
+    static func == (lhs : User , rhs : User) -> Bool {
+        lhs.id == rhs.id
+    }
+    
 }
 
 func saveUserLocally(_ user : User){
