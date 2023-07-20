@@ -55,6 +55,10 @@ class profileTableViewController: UITableViewController {
             print("Start Chatting")
             
             let chatId = startChat(sender: User.currentUser!, reciever: user!)
+            
+            let privateMSGView = MSGViewController(chatId: chatId, recipientId: user!.id, recipientName: user!.username)
+            
+            navigationController?.pushViewController(privateMSGView, animated: true)
         }
     }
     

@@ -13,6 +13,7 @@ class ChatTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         unreadCounterViewOutlet.layer.cornerRadius = unreadCounterViewOutlet.frame.width/2
     }
 

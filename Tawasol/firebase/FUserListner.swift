@@ -121,7 +121,32 @@ class FUserListner {
             
         }
     }
+    // MARK: - Dowenload Users using ids
     
+    func dowenloadUsersFromFirestore(withIds : [String] ,completion : @escaping (_ allUsers : [User])->Void){
+        
+        var count = 0
+        var usersArray : [User] = []
+        
+        for userId in withIds {
+            FirestoreReferance(.User).document(userId).getDocument { querySnapshot , error in
+                guard let document = querySnapshot else {
+                    return
+                }
+                let user = try? document.data(as: User.self)
+                usersArray.append (user!)
+                count += 1
+                if count == withIds.count {
+                    completion (usersArray)
+                }
+            }
+            
+        }
+        
+    }
+    
+    
+    // MARK: - Dowenload ALl Users
     func dowenloadAllUsersFromFirestore(completion : @escaping (_ allUsers : [User])-> Void ) {
         
         var users:[User] = []

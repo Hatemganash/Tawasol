@@ -18,7 +18,7 @@ struct User:Codable , Equatable {
         return Auth.auth().currentUser!.uid
     }
     
-    static var currentUser : User? {
+    static var currentUser : User! {
         if Auth.auth().currentUser != nil {
             
             if let data = userDefaults.data(forKey: kCurrentUser){

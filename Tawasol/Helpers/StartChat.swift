@@ -2,6 +2,21 @@
 import Foundation
 import Firebase
 
+
+
+func restartChat(chatRoomId : String , memberIds :[String]){
+    // Dowenload users using member ids
+    
+    FUserListner.shared.dowenloadUsersFromFirestore(withIds: memberIds) { allUsers in
+        if allUsers.count > 0 {
+            createChatRooms(chatRoomId: chatRoomId, users: allUsers)
+        }
+    }
+    
+    
+}
+
+
 func startChat (sender : User , reciever : User) -> String {
     var chatRoomId = ""
     let value = sender.id.compare(reciever.id).rawValue

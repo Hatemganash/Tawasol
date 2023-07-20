@@ -62,6 +62,7 @@ class ChatRoomTableViewController: UITableViewController {
         return 100.0
     }
     
+    
     // MARK: - Delete chat
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -76,6 +77,13 @@ class ChatRoomTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    // MARK: - TableView Delegation Func
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatRoomObject = searchController.isActive ? filteredChatRooms[indexPath.row] : allChatRooms[indexPath.row]
+        
+        goToMessage(chatRoom :chatRoomObject)
+    }
   
     private func dowenloadChatRooms() {
         FChatRoomListner.shared.dowenloadChatRooms { allFirebaseChatRooms in
@@ -85,6 +93,18 @@ class ChatRoomTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    // MARK: -  Navigation
+    
+   func goToMessage(chatRoom :ChatRoom){
+       
+       // TODO: - make sure both users have chatroom
+       restartChat(chatRoomId: chatRoom.chatRoomId, memberIds: chatRoom.memberIds)
+
+        let privateMSGView = MSGViewController(chatId: chatRoom.chatRoomId, recipientId: chatRoom.receiverId, recipientName: chatRoom.receiverName)
+        
+        navigationController?.pushViewController(privateMSGView, animated: true)
     }
 
 
