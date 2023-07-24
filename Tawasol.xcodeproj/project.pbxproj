@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8930C0C92A6AEC300067C174 /* Incoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8930C0C82A6AEC300067C174 /* Incoming.swift */; };
 		893B2D3E2A098AAC00CB1627 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B2D3D2A098AAC00CB1627 /* GlobalFunctions.swift */; };
 		893B2D402A0A031E00CB1627 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B2D3F2A0A031E00CB1627 /* Extensions.swift */; };
 		893B2D422A0A062700CB1627 /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B2D412A0A062700CB1627 /* StatusTableViewController.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		11547B53164EE12D7ADBC4B8 /* Pods-Tawasol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tawasol.release.xcconfig"; path = "Target Support Files/Pods-Tawasol/Pods-Tawasol.release.xcconfig"; sourceTree = "<group>"; };
+		8930C0C82A6AEC300067C174 /* Incoming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incoming.swift; sourceTree = "<group>"; };
 		893B2D3D2A098AAC00CB1627 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		893B2D3F2A0A031E00CB1627 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		893B2D412A0A062700CB1627 /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				89A069B42A67E3CF00B9941B /* MKMessage.swift */,
 				899D4B1E2A6943B7004D3EE3 /* RealmManager.swift */,
 				899D4B222A6947BE004D3EE3 /* OutGoing.swift */,
+				8930C0C82A6AEC300067C174 /* Incoming.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				89C0109A2A66890400EACD2E /* MSGViewController.swift in Sources */,
 				899D4B212A6944C8004D3EE3 /* FMSGListner.swift in Sources */,
 				89A069A62A67D12600B9941B /* LocalMessage.swift in Sources */,
+				8930C0C92A6AEC300067C174 /* Incoming.swift in Sources */,
 				89923B2729EFF52800C6F4E8 /* FUserListner.swift in Sources */,
 				89BB53D329EF6D0900719FA3 /* AppDelegate.swift in Sources */,
 				893B2D402A0A031E00CB1627 /* Extensions.swift in Sources */,

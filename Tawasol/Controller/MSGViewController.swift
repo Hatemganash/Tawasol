@@ -16,8 +16,10 @@ class MSGViewController: MessagesViewController {
     let micButton = InputBarButtonItem()
     let currentUser = MKSender(senderId: User.currentId, displayName: User.currentUser!.username)
     
-    let mkMessage : [MKMessage] = []
-    
+    var mkMessages : [MKMessage] = []
+    var allLocalMessges : Results<LocalMessage>!
+    let realm = try! Realm()
+    var notificationToken : NotificationToken?
     
     // MARK: - init
     
@@ -39,7 +41,8 @@ class MSGViewController: MessagesViewController {
         configureMSGCollectionView()
         configureMSGInputBar()
         
-        
+        loadMessages()
+        listenForNewMessages()
         
     }
     private func configureMSGCollectionView(){
@@ -49,7 +52,7 @@ class MSGViewController: MessagesViewController {
         messagesCollectionView.messagesDisplayDelegate = self
         messagesCollectionView.messagesLayoutDelegate = self
         
-        scrollsToBottomOnKeyboardBeginsEditing = true
+        scrollsToLastItemOnKeyboardBeginsEditing = true
         maintainPositionOnKeyboardFrameChanged = true
         messagesCollectionView.refreshControl = refreshController
     }
@@ -72,7 +75,7 @@ class MSGViewController: MessagesViewController {
         messageInputBar.setLeftStackViewWidthConstant(to: 36, animated: false)
         
         // TODO: - Update Mic status
-        updateMicButtonStatus(show : false)
+        updateMicButtonStatus(show : true)
         
         
         messageInputBar.inputTextView.isImagePasteEnabled = false
@@ -107,6 +110,65 @@ class MSGViewController: MessagesViewController {
        // print(Realm.Configuration.defaultConfiguration.fileURL!)
 
     }
-}
+    // MARK: - Load Messages
+    
+    private func loadMessages() {
+        let predicate = NSPredicate(format: "chatRoomId = %@", chatId)
+        
+        allLocalMessges = realm.objects(LocalMessage.self).filter(predicate).sorted(byKeyPath: KDATE , ascending: true)
+        if allLocalMessges.isEmpty {
+            checkForOldMessages() }
+        
+        notificationToken = allLocalMessges.observe({(change : RealmCollectionChange) in
+            switch change{
+                
+            case .initial:
+                self.insertMKMessages()
+                self.messagesCollectionView.reloadData()
+                self.messagesCollectionView.scrollToLastItem(animated: true)
+                
+            case .update(_,_, let insertions, _) :
+                for index in insertions {
+                    self.insertMKMessage(localMessage:self.allLocalMessges[index])
+                    self.messagesCollectionView.reloadData()
+                    self.messagesCollectionView.scrollToLastItem(animated: true)
 
+                }
+            case .error(let error):
+                print("error on new insertion",error.localizedDescription)
+            }
+        })
+    }
+    
+    private func insertMKMessage(localMessage : LocalMessage){
+        
+        let incoming = Incoming(messageViewController: self)
+        let mkMessage = incoming.creatMKMessage(localMessage: localMessage)
+        self.mkMessages.append(mkMessage)
+        
+    }
+    
+    private func insertMKMessages(){
+        for localMessage in allLocalMessges {
+            insertMKMessage(localMessage: localMessage)
+        }
+    }
+    
+    private func checkForOldMessages() {
+        FMSGListner.shared.checkForOldMessages(User.currentId, collectionId: chatId)
+    }
+    private func listenForNewMessages (){
+        FMSGListner.shared.listenForNewMessages(User.currentId, collectionId: chatId, lastMessageDate: lastMessageDate())
+    }
+    
+    // MARK: - Helpers
+    
+    private func lastMessageDate () -> Date{
+        
+        let lastMessageDate = allLocalMessges.last?.date ?? Date()
+        return Calendar.current.date(byAdding: .second,value: 1 , to: lastMessageDate) ?? lastMessageDate
+        
+    }
+    
+}
 

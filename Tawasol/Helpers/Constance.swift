@@ -20,4 +20,6 @@ public let KVIDEO = "Video"
 public let KAUDIO = "Audio"
 public let KLOCATION = "Location"
 
+public let KDATE = "date"
+
 

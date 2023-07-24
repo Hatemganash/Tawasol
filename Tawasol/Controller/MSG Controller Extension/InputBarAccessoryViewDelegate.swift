@@ -5,7 +5,11 @@ import InputBarAccessoryView
 extension MSGViewController : InputBarAccessoryViewDelegate  {
     
     func inputBar(_ inputBar: InputBarAccessoryView, textViewTextDidChangeTo text: String) {
-        print("typing" , text)
+        
+      //  print("typing" , text)
+        
+        updateMicButtonStatus(show : text == "")
+
     }
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
